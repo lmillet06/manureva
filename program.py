@@ -8,16 +8,17 @@ conn =sqlite3.connect(fichierDonnees)
 conn.text_factory = str
 cur =conn.cursor()
 car =conn.cursor()
-cur.execute("CREATE TABLE membres (age INTEGER, nom TEXT, taille REAL)")
-cur.execute("INSERT INTO membres(age,nom,taille) VALUES(21,'Dupont',1.83)")
-cur.execute("INSERT INTO membres(age,nom,taille) VALUES(15,'Blumar',1.57)")
-cur.execute("INSERT Into membres(age,nom,taille) VALUES(18,'Ozemir',1.69)")
+
+# cur.execute("CREATE TABLE membres (age INTEGER, nom TEXT, taille REAL)")
+# cur.execute("INSERT INTO membres(age,nom,taille) VALUES(21,'Dupont',1.83)")
+# cur.execute("INSERT INTO membres(age,nom,taille) VALUES(15,'Blumar',1.57)")
+# cur.execute("INSERT Into membres(age,nom,taille) VALUES(18,'Ozemir',1.69)")
 
 # cur.execute("DELETE FROM membres where age >1")
 
 cur.execute("select name from sqlite_master where type = 'table'")
 car.execute("select * from membres")
-print("----Liste des talbes de la BDD SQLite3----")
+print("----Liste des tables de la BDD SQLite3----")
 print(list(cur))
 print("----MEMBRES----")
 print(list(car))
