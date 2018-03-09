@@ -8,3 +8,5 @@ script:
 virtualenv:
   system_site_packages: true
 
+notifications:
+   slack: epsiic:ktzjhF2hKb3rR8f9gSXYf0Hm
