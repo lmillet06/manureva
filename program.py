@@ -20,23 +20,28 @@ car =conn.cursor()
 class TestFonction(unittest.TestCase): 
     # Chaque méthode dont le nom commence par 'test_'
     # est un test.
- def test_get_element(self): 
-  
+ def test_get_element(self):   
   cir =conn.cursor()
   cir.execute("Select age from membres where nom='Dupont'")    
   first=cir.fetchone()[0]
-  self.assertEqual(first,25)
+  self.assertEqual(first,21)
   
- 
+ def test_get_element(self):  
+  cir =conn.cursor()
+  cir.execute("Select age from membres where nom='Blumar'")    
+  first=cir.fetchone()[0]
+  self.assertEqual(first,18)
+  
  def tearDown(self):
-     conn.commit()
-     cur.close()
-     car.close()
-     conn.close()
-     print("END OF EXEC")
+  conn.commit()
+  cur.close()
+  car.close()
+  conn.close()
+  print(" ")
+  print("END OF EXEC")
 
 
-     os.system("pause")
+  os.system("pause")
   
 cur.execute("select name from sqlite_master where type = 'table'")
 print("----Liste des tables de la BDD SQLite3----")
