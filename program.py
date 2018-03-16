@@ -25,7 +25,7 @@ class TestFonction(unittest.TestCase):
   cir =conn.cursor()
   cir.execute("Select age from membres where nom='Dupont'")    
   first=cir.fetchone()[0]
-  self.assertEqual(first,21)
+  self.assertEqual(first,25)
   
  
  def tearDown(self):
