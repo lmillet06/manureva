@@ -1,8 +1,9 @@
 # -*-coding:Latin-1 -*
-import os # On importe le module os
+import os 
 import sqlite3
+import unittest
+import logging
 
-# fichierDonnees ="C:/Users/emare/Desktop/EPSI B3/TOURMAN Integration continue/bd_test.sq3"
 fichierDonnees ="bd_test.sq3" 
 conn =sqlite3.connect(fichierDonnees)
 conn.text_factory = str
@@ -16,19 +17,35 @@ car =conn.cursor()
 
 # cur.execute("DELETE FROM membres where age >1")
 
+class TestFonction(unittest.TestCase): 
+    # Chaque méthode dont le nom commence par 'test_'
+    # est un test.
+ def test_get_element(self): 
+  
+  cir =conn.cursor()
+  cir.execute("Select age from membres where nom='Dupont'")    
+  first=cir.fetchone()[0]
+  self.assertEqual(first,21)
+  
+ 
+ def tearDown(self):
+     conn.commit()
+     cur.close()
+     car.close()
+     conn.close()
+     print("END OF EXEC")
+
+
+     os.system("pause")
+  
 cur.execute("select name from sqlite_master where type = 'table'")
-car.execute("select * from membres")
 print("----Liste des tables de la BDD SQLite3----")
 print(list(cur))
+car.execute("select * from membres")
 print("----MEMBRES----")
 print(list(car))
 
-conn.commit()
-cur.close()
-car.close()
-conn.close()
-
-
-print("END OF EXEC")
-
-os.system("pause")
+if __name__ == '__main__':
+    unittest.main()
+	    
+    os.system("pause")
