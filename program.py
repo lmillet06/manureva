@@ -51,7 +51,7 @@ class TestFonction(unittest.TestCase):
   cir =conn.cursor() 
   cir.execute("Select age from membres where nom='Blumar'")    
   first=cir.fetchone()[0]
-  self.assertEqual(first,18)
+  self.assertEqual(first,15)
   
  
   
