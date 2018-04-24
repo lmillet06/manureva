@@ -10,3 +10,12 @@ virtualenv:
 
 notifications:
    slack: epsiic:ktzjhF2hKb3rR8f9gSXYf0Hm
+
+addons:
+  sonarcloud:
+    organization: "lmillet06-github" # the key of the org you chose at step #3
+    token:
+      secure: •••••••••••••••• # encrypted value of your token
+script:
+  # other script steps might be done before running the actual analysis
+  - sonar-scanner
