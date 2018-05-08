@@ -13,6 +13,8 @@ notifications:
 
 addons:
   sonarcloud:
-    organization: "manureva" # the key of the org you chose at step #3
+    organization: "epicmess-github" # the key of the org you chose at step #3
     token:
       secure: •••••••••••••••• # encrypted value of your token
+
+dist: trusty
