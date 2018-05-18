@@ -11,6 +11,9 @@ virtualenv:
 notifications:
    slack: epsiic:ktzjhF2hKb3rR8f9gSXYf0Hm
 
+dist: trusty
+sudo: required
+
 addons:
   sonarcloud:
     organization: "epicmess-github" 
@@ -20,4 +23,4 @@ addons:
 script:
   # other script steps might be done before running the actual analysis
   - sonar-scanner -X
-dist: trusty
+
