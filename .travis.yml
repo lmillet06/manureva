@@ -14,7 +14,8 @@ notifications:
 addons:
   sonarcloud:
     organization: "epicmess-github" # the key of the org you chose at step #3
-    token: $SONAR_TOKEN
+    token: 
+    secure: "BLbJM4AO5XN+e497Qn/ailLqYMKENabJZs3HqZAtlCEL0hoKtnk1XDn2tl9NnvgD13gSl5JHVTaZd5ihMdLNXI1kL8OG+3iCCmVF0JBRrhx+++hkt/GavRYUaBChEdMddUkW1XdMlKt1RWWUVyBV9Ou3XjZL5VDNT060J/bWo5slSA/bSK/xEL2rHIZegK1sIygQJLf1Ras2rm00CHMydWEL0qISIPrublaWjXJLF/mdbgsOSJJYWVRRR8x+b9WHMFpfqxiB+S+ZyWk0WRp8NvNtFbpMVDfVLQ9X97VOXgpNgpFrldP6ESplY2Qw0Hfm49NYa7icdt2LfjOiovdhc5qsVxL5KAYP+q0EsBybhyUBl1Vur7hfS668OZ0+YONDPkfy67XAUAm6pcjPqUrj9NzO53/qPuMDiCBcmiO4yr1I3UKUaZryfV+a2r44bUL2zH7qsAbcCYZ4tmBS/NNEZF3Pkpwk4h+uVE2W16GTVhUCoiEoN8VxO+sUM2rZS9gnHEfMuTogEZPLUuT3COTiLc2iFNUOtzTdCeqMR4kqJFWffJnwGSnKVMhVFog4s3d/9Ot2h3ZjqU24ZRV+vGRq0cznywscBFmvhkTKoT04sWKU8GVm5hyEpAEj/H7qniYPlMP2YIxv2KhZZakUNywyZpPArZ9AzYNydjTecdkmrVQ="
     
 script:
   # other script steps might be done before running the actual analysis
