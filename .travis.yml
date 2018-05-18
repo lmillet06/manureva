@@ -18,5 +18,5 @@ addons:
     
 script:
   # other script steps might be done before running the actual analysis
-  - sonar-scanner
+  - sonar-scanner -X
 dist: trusty
