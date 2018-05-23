@@ -15,6 +15,7 @@ dist: trusty
 sudo: required
 
 addons:
+  artifacts: true
   sonarcloud:
     organization: "epicmess-github" 
     
