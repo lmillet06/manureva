@@ -24,9 +24,9 @@ class TestFonction(unittest.TestCase):
 
  def setUp(self):
   conn =sqlite3.connect(fichierDonnees)
-  cur =conn.cursor()
-  car =conn.cursor()
-  cir =conn.cursor()
+  #cur =conn.cursor()
+  #car =conn.cursor()
+  #cir =conn.cursor()
   print("SetUp")
 
 
