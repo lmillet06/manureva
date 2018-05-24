@@ -64,7 +64,7 @@ class TestFonction(unittest.TestCase):
 
   cir.execute("Select age from membres where nom='Dupont'")
   first=cir.fetchone()[0]
-  self.assertEqual(first,18)
+  self.assertEqual(first,10)
 
  def test_get_element2(self):
   conn =sqlite3.connect(fichierDonnees)
