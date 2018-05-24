@@ -33,8 +33,7 @@ class TestFonction(unittest.TestCase):
   #car.close()
   #cir.close()
   conn.close()
-  #print(" ")
-  #print("TearDown")
+  
   #os.system("pause")
 
  def test_get_element(self):
