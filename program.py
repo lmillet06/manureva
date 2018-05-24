@@ -33,15 +33,15 @@ class TestFonction(unittest.TestCase):
   #car.close()
   #cir.close()
   conn.close()
-  print(" ")
-  print("TearDown")
+  #print(" ")
+  #print("TearDown")
   #os.system("pause")
 
  def test_get_element(self):
 
   cir.execute("Select age from membres where nom='Dupont'")
   first=cir.fetchone()[0]
-  self.assertEqual(first,21)
+  self.assertEqual(first,20)
 
  def test_get_element2(self):
   conn =sqlite3.connect(fichierDonnees)
