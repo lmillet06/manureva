@@ -23,7 +23,7 @@ class TestFonction(unittest.TestCase):
     # est un test1.
 
  def setUp(self):
-  conn =sqlite3.connect(fichierDonnees)
+  
   print("SetUp")
 
 
