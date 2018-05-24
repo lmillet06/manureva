@@ -35,7 +35,7 @@ class TestFonction(unittest.TestCase):
   conn.close()
   print(" ")
   print("TearDown")
-  os.system("pause")
+  #os.system("pause")
 
  def test_get_element(self):
 
