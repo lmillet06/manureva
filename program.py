@@ -24,9 +24,6 @@ class TestFonction(unittest.TestCase):
 
  def setUp(self):
   conn =sqlite3.connect(fichierDonnees)
-  #cur =conn.cursor()
-  #car =conn.cursor()
-  #cir =conn.cursor()
   print("SetUp")
 
 
@@ -44,7 +41,7 @@ class TestFonction(unittest.TestCase):
 
   cir.execute("Select age from membres where nom='Dupont'")
   first=cir.fetchone()[0]
-  self.assertEqual(first,10)
+  self.assertEqual(first,21)
 
  def test_get_element2(self):
   conn =sqlite3.connect(fichierDonnees)
